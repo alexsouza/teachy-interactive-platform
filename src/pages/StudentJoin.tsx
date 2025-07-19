@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const StudentJoin = () => {
+  const { t } = useTranslation();
   const [roomId, setRoomId] = useState('');
   const [name, setName] = useState('');
   const [error, setError] = useState('');
@@ -20,7 +22,7 @@ const StudentJoin = () => {
     e.preventDefault();
     
     if (!roomId.trim()) {
-      setError('Please enter a room ID');
+      setError(t('studentJoin.invalidCode'));
       return;
     }
     
@@ -35,7 +37,7 @@ const StudentJoin = () => {
 
   return (
     <div className="py-8 max-w-md mx-auto">
-      <h1 className="text-2xl font-bold mb-8 text-center">Join a Session</h1>
+      <h1 className="text-2xl font-bold mb-8 text-center">{t('studentJoin.title')}</h1>
       
       <div className="card">
         <form onSubmit={handleSubmit}>
@@ -52,7 +54,7 @@ const StudentJoin = () => {
           </div>
           
           <div className="form-group">
-            <label htmlFor="roomId">Room ID</label>
+            <label htmlFor="roomId">{t('studentJoin.enterCode')}</label>
             <input
               id="roomId"
               type="text"
@@ -62,14 +64,14 @@ const StudentJoin = () => {
                 setRoomId(e.target.value);
                 setError('');
               }}
-              placeholder="Enter room ID"
+              placeholder={t('studentJoin.enterCode')}
               required
             />
             {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
           </div>
           
           <button type="submit" className="btn btn-primary w-full mt-4">
-            Join Session
+            {t('studentJoin.join')}
           </button>
         </form>
       </div>

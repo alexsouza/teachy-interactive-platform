@@ -1,22 +1,29 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
+  const { t } = useTranslation();
+  
   return (
     <header className="bg-white shadow-sm">
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="text-xl font-bold text-primary">
-          Teachy Interactive
+          {t('header.title')}
         </Link>
-        <nav>
-          <ul className="flex gap-4">
-            <li>
-              <Link to="/" className="hover:text-primary">Teacher</Link>
-            </li>
-            <li>
-              <Link to="/join" className="hover:text-primary">Student</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="flex items-center">
+          <nav className="mr-4">
+            <ul className="flex gap-4">
+              <li>
+                <Link to="/" className="hover:text-primary">{t('header.teacher')}</Link>
+              </li>
+              <li>
+                <Link to="/join" className="hover:text-primary">{t('header.student')}</Link>
+              </li>
+            </ul>
+          </nav>
+          <LanguageSwitcher />
+        </div>
       </div>
     </header>
   );

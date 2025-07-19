@@ -1,0 +1,70 @@
+{
+  "header": {
+    "title": "Teachy Interactive",
+    "teacher": "Teacher",
+    "student": "Student"
+  },
+  "teacherDashboard": {
+    "title": "Teacher Dashboard",
+    "createQuestion": "Create Question",
+    "questionType": "Question Type",
+    "questionText": "Question Text",
+    "options": "Options",
+    "addOption": "Add Option",
+    "create": "Create",
+    "activeQuestions": "Active Questions",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "roomCode": "Room Code",
+    "copyLink": "Copy",
+    "linkCopied": "Link copied to clipboard!",
+    "shareLink": "Compartilhe este link com os alunos",
+    "noQuestions": "No questions created yet.",
+    "multipleChoice": "Multiple Choice",
+    "wordCloud": "Word Cloud",
+    "openText": "Open Text",
+    "remove": "Remove",
+    "option": "Option",
+    "connecting": "Connecting to server",
+    "type": "Type"
+  },
+  "studentJoin": {
+    "title": "Join a Room",
+    "enterCode": "Enter Room Code",
+    "join": "Join",
+    "invalidCode": "Invalid room code"
+  },
+  "studentInterface": {
+    "waiting": "Waiting for the teacher to activate a question...",
+    "submit": "Submit",
+    "submitted": "Answer submitted!",
+    "enterAnswer": "Enter your answer",
+    "session": "Interactive Session",
+    "room": "Room",
+    "connecting": "Connecting to server",
+    "wait": "Please wait"
+  },
+  "multipleChoiceQuestion": {
+    "submitAnswer": "Submit Answer",
+    "submitMessage": "Your answer has been submitted!",
+    "votes": "votes"
+  },
+  "openTextQuestion": {
+    "submitAnswer": "Submit Answer",
+    "submitMessage": "Your answer has been submitted!",
+    "placeholder": "Type your answer here",
+    "waiting": "Waiting for responses",
+    "received": "received",
+    "responses": "responses",
+    "response": "response"
+  },
+  "wordCloudQuestion": {
+    "submitAnswer": "Submit Answer",
+    "submitMessage": "Your answer has been submitted!",
+    "placeholder": "Type your word or phrase here",
+    "waiting": "Waiting for responses",
+    "received": "received",
+    "responses": "responses",
+    "response": "response"
+  }
+}

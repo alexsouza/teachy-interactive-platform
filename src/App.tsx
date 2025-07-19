@@ -1,8 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
-import TeacherDashboard from './pages/TeacherDashboard';
-import StudentJoin from './pages/StudentJoin';
-import StudentInterface from './pages/StudentInterface';
-import Header from './components/Header';
+import { Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import StudentInterface from './pages/StudentInterface'
+import StudentJoin from './pages/StudentJoin'
+import TeacherDashboard from './pages/TeacherDashboard'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         </Routes>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

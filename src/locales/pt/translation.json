@@ -1,0 +1,70 @@
+{
+  "header": {
+    "title": "Teachy Interactive",
+    "teacher": "Professor",
+    "student": "Estudante"
+  },
+  "teacherDashboard": {
+    "title": "Painel do Professor",
+    "createQuestion": "Criar Pergunta",
+    "questionType": "Tipo de Pergunta",
+    "questionText": "Texto da Pergunta",
+    "options": "Opções",
+    "addOption": "Adicionar Opção",
+    "create": "Criar",
+    "activeQuestions": "Perguntas Ativas",
+    "activate": "Ativar",
+    "deactivate": "Desativar",
+    "roomCode": "Código da Sala",
+    "copyLink": "Copiar",
+    "linkCopied": "Link copiado para a área de transferência!",
+    "shareLink": "Compartilhe este link com os alunos",
+    "noQuestions": "Nenhuma pergunta criada ainda.",
+    "multipleChoice": "Múltipla escolha",
+    "wordCloud": "Nuvem de Palavras",
+    "openText": "Texto Aberto",
+    "remove": "Remover",
+    "option": "Opção",
+    "connecting": "Conectando ao servidor",
+    "type": "Tipo"
+  },
+  "studentJoin": {
+    "title": "Entrar em uma Sala",
+    "enterCode": "Digite o Código da Sala",
+    "join": "Entrar",
+    "invalidCode": "Código de sala inválido"
+  },
+  "studentInterface": {
+    "waiting": "Aguardando o professor ativar uma pergunta...",
+    "submit": "Enviar",
+    "submitted": "Resposta enviada!",
+    "enterAnswer": "Digite sua resposta",
+    "session": "Sessão Interativa",
+    "room": "Sala",
+    "connecting": "Conectando ao servidor",
+    "wait": "Por favor, aguarde"
+  },
+  "multipleChoiceQuestion": {
+    "submitAnswer": "Enviar Resposta",
+    "submitMessage": "Sua resposta foi enviada!",
+    "votes": "votos"
+  },
+  "openTextQuestion": {
+    "submitAnswer": "Enviar Resposta",
+    "submitMessage": "Sua resposta foi enviada!",
+    "placeholder": "Digite sua resposta aqui",
+    "waiting": "Aguardando respostas",
+    "received": "recebidas",
+    "responses": "respostas",
+    "response": "resposta"
+  },
+  "wordCloudQuestion": {
+    "submitAnswer": "Enviar Resposta",
+    "submitMessage": "Sua resposta foi enviada!",
+    "placeholder": "Digite sua palavra ou frase aqui",
+    "waiting": "Aguardando respostas",
+    "received": "recebidas",
+    "responses": "respostas",
+    "response": "resposta"
+  }
+}
