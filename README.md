@@ -105,6 +105,108 @@ The theme implementation uses:
 7. **Language Selection**: Switch between available languages using the language selector in the header
 8. **Theme Toggle**: Switch between light and dark themes using the theme toggle button in the header
 
+## API Documentation
+
+The Teachy Interactive Platform uses Socket.IO for real-time communication between the client and server. Below is the documentation for the available Socket.IO events.
+
+### Socket.IO Events
+
+#### Room Management
+
+| Event | Direction | Parameters | Description |
+|-------|-----------|------------|-------------|
+| `create-room` | Client → Server | `{ roomId: string }` | Creates a new room with the specified ID |
+| `join-room` | Client → Server | `{ roomId: string, studentName: string }` | Joins an existing room with the specified ID |
+| `leave-room` | Client → Server | `{ roomId: string }` | Leaves the specified room |
+| `student-joined` | Server → Client | `{ studentId: string, studentName: string, count: number }` | Notifies when a student joins a room |
+| `student-left` | Server → Client | `{ studentId: string, count: number }` | Notifies when a student leaves a room |
+
+#### Question Management
+
+| Event | Direction | Parameters | Description |
+|-------|-----------|------------|-------------|
+| `activate-question` | Client → Server | `{ roomId: string, questionId: string, question: Question }` | Activates a question in a room |
+| `question-activated` | Server → Client | `{ roomId: string, questionId: string, question: Question }` | Notifies when a question is activated |
+| `get-active-question` | Client → Server | `{ roomId: string }, callback` | Requests the currently active question in a room |
+| `submit-answer` | Client → Server | `{ roomId: string, questionId: string, answer: any }` | Submits an answer to a question |
+| `answer-received` | Server → Client | `{ roomId: string, questionId: string, questionType: string, answer: any }` | Notifies when an answer is received |
+
+### Data Types
+
+#### Question
+
+```typescript
+interface Question {
+  id: string;
+  type: QuestionType; // 'MULTIPLE_CHOICE', 'WORD_CLOUD', or 'OPEN_TEXT'
+  text: string;
+  options?: Option[];
+  isActive?: boolean;
+}
+
+interface Option {
+  id: string;
+  text: string;
+}
+```
+
+### API Usage Examples
+
+#### Creating a Room (Teacher)
+
+```javascript
+// Connect to Socket.IO server
+const socket = io();
+
+// Create a new room
+const roomId = generateUniqueId();
+socket.emit('create-room', { roomId });
+```
+
+#### Joining a Room (Student)
+
+```javascript
+// Connect to Socket.IO server
+const socket = io();
+
+// Join an existing room
+socket.emit('join-room', { 
+  roomId: 'room-123', 
+  studentName: 'John Doe' 
+});
+```
+
+#### Activating a Question (Teacher)
+
+```javascript
+// Activate a question
+socket.emit('activate-question', {
+  roomId: 'room-123',
+  questionId: 'question-456',
+  question: {
+    id: 'question-456',
+    type: 'MULTIPLE_CHOICE',
+    text: 'What is your favorite color?',
+    options: [
+      { id: 'option-1', text: 'Red' },
+      { id: 'option-2', text: 'Blue' },
+      { id: 'option-3', text: 'Green' }
+    ]
+  }
+});
+```
+
+#### Submitting an Answer (Student)
+
+```javascript
+// Submit an answer
+socket.emit('submit-answer', {
+  roomId: 'room-123',
+  questionId: 'question-456',
+  answer: 'option-2' // For multiple choice, this would be the option ID
+});
+```
+
 ## Project Structure
 
 ```
