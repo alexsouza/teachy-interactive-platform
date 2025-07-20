@@ -150,6 +150,10 @@ a {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }

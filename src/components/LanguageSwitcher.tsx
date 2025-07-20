@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next';
+import USFlag from '../assets/flags/us.svg';
+import BRFlag from '../assets/flags/br.svg';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -11,15 +13,17 @@ const LanguageSwitcher = () => {
     <div className="flex gap-2">
       <button 
         onClick={() => changeLanguage('en')} 
-        className={`px-2 py-1 rounded ${i18n.language === 'en' ? 'bg-primary text-white' : 'bg-gray-200'}`}
+        className={`p-1 rounded ${i18n.language === 'en' ? 'ring-2 ring-primary' : 'opacity-50'}`}
+        title="English"
       >
-        EN
+        <USFlag className="w-6 h-6" />
       </button>
       <button 
         onClick={() => changeLanguage('pt')} 
-        className={`px-2 py-1 rounded ${i18n.language === 'pt' ? 'bg-primary text-white' : 'bg-gray-200'}`}
+        className={`p-1 rounded ${i18n.language === 'pt' ? 'ring-2 ring-primary' : 'opacity-50'}`}
+        title="Português"
       >
-        PT
+        <BRFlag className="w-6 h-6" />
       </button>
     </div>
   );
