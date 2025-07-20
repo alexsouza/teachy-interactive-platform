@@ -32,7 +32,9 @@
     "title": "Join a Room",
     "enterCode": "Enter Room Code",
     "join": "Join",
-    "invalidCode": "Invalid room code"
+    "invalidCode": "Invalid room code",
+    "yourName": "Your Name (Optional)",
+    "enterName": "Enter your name"
   },
   "studentInterface": {
     "waiting": "Waiting for the teacher to activate a question...",

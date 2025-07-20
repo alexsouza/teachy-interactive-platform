@@ -32,7 +32,9 @@
     "title": "Entrar em uma Sala",
     "enterCode": "Digite o Código da Sala",
     "join": "Entrar",
-    "invalidCode": "Código de sala inválido"
+    "invalidCode": "Código de sala inválido",
+    "yourName": "Seu nome (Opcional)",
+    "enterName": "Digite seu nome"
   },
   "studentInterface": {
     "waiting": "Aguardando o professor ativar uma pergunta...",

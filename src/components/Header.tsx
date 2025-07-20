@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from './LanguageSwitcher'
+import ThemeToggle from './ThemeToggle'
 
 const Header = () => {
   const { t } = useTranslation()
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-white dark:bg-gray-800 shadow-sm">
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="text-xl font-bold text-primary">
           {t('header.title')}
@@ -26,7 +27,10 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <LanguageSwitcher />
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </header>

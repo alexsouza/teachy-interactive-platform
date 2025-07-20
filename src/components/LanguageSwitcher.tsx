@@ -12,20 +12,32 @@ const LanguageSwitcher = () => {
       <button
         onClick={() => changeLanguage('en')}
         className={`p-1 rounded border ${
-          i18n.language === 'en' ? 'border-primary shadow-sm' : 'border-gray-200 opacity-70'
+          i18n.language === 'en'
+            ? 'border-primary shadow-sm'
+            : 'border-gray-200 opacity-70'
         }`}
         title="English"
       >
-        <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-6 h-4" />
+        <img
+          src="https://flagcdn.com/w20/us.png"
+          alt="English"
+          className="w-6 h-4"
+        />
       </button>
       <button
         onClick={() => changeLanguage('pt')}
         className={`p-1 rounded border ${
-          i18n.language === 'pt' ? 'border-primary shadow-sm' : 'border-gray-200 opacity-70'
+          i18n.language === 'pt'
+            ? 'border-primary shadow-sm'
+            : 'border-gray-200 opacity-70'
         }`}
         title="Português"
       >
-        <img src="https://flagcdn.com/w20/br.png" alt="Português" className="w-6 h-4" />
+        <img
+          src="https://flagcdn.com/w20/br.png"
+          alt="Português"
+          className="w-6 h-4"
+        />
       </button>
     </div>
   )
