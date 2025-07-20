@@ -27,10 +27,8 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <LanguageSwitcher />
-          </div>
+          <ThemeToggle />
+          <LanguageSwitcher />
         </div>
       </div>
     </header>
