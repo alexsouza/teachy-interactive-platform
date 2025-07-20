@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className="bg-white dark:bg-gray-800 shadow-sm">
-      <div className="container flex items-center justify-between py-4">
+      <div className="container flex wrap items-center justify-between py-4">
         <Link to="/" className="text-xl font-bold text-primary">
           {t('header.title')}
         </Link>

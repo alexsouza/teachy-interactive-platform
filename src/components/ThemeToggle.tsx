@@ -7,7 +7,7 @@ const ThemeToggle = () => {
     <div className="flex gap-2">
       <button
         onClick={toggleTheme}
-        className="p-1 rounded border border-gray-300 dark:border-gray-600"
+        className="p-1 rounded border-gray-300 dark:border-gray-600"
         title={
           theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'
         }
